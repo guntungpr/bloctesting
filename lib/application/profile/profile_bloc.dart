@@ -44,6 +44,33 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
             isLoading: false,
             optionFailedOrDetailProfile: optionOf(failureOrSuccess),
           ));
+          emit(state.copyWith(optionFailedOrDetailProfile: none()));
+        },
+        addFriendChanged: (e) async {
+          if (state.listFriends.contains(e.id)) {
+            emit(state.copyWith(listFriends: state.listFriends.remove(e.id)));
+          } else {
+            emit(state.copyWith(listFriends: state.listFriends.add(e.id)));
+          }
+          await iProfileRepository.addFriends(id: e.id);
+        },
+        getAllFriends: (e) async {
+          emit(state.copyWith(isLoading: true));
+          final failureOrSuccess = await iProfileRepository.getAllFriendsDB();
+          List<String> friends = [];
+          failureOrSuccess.match(
+            (l) => [],
+            (r) {
+              for (int i = 0; i < r.length; i++) {
+                friends.add(r[i]);
+              }
+              return friends;
+            },
+          );
+          emit(state.copyWith(
+            isLoading: false,
+            listFriends: state.listFriends.addAll(friends).toIList(),
+          ));
         },
       );
     });

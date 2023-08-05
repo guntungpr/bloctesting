@@ -7,8 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PostWidget extends StatelessWidget {
-  const PostWidget({super.key, required this.post});
+  const PostWidget({super.key, required this.post, required this.isLikedPost});
   final PostDetailModel post;
+  final bool isLikedPost;
 
   @override
   Widget build(BuildContext context) {
@@ -91,16 +92,19 @@ class PostWidget extends StatelessWidget {
                   const SizedBox(height: 5),
                   const Divider(thickness: 2),
                   const SizedBox(height: 5),
-                  const Row(
+                  Row(
                     children: [
-                      Icon(
-                        Icons.favorite,
-                        color: Colors.grey,
+                      IconButton(
+                        icon: Icon(
+                          Icons.favorite,
+                          color: isLikedPost ? Colors.red : Colors.grey,
+                        ),
+                        onPressed: () {
+                          context.read<PostBloc>().add(PostEvent.likeChanged(post: post));
+                        },
                       ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text('Like'),
+                      const SizedBox(width: 5),
+                      const Text('Like'),
                     ],
                   )
                 ],

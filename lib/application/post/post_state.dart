@@ -8,7 +8,9 @@ class PostState with _$PostState {
     required Option<Either<FailureNetwork, PostModel>> optionFailedOrPost,
     required IList<PostDetailModel> listPost,
     required IList<PostDetailModel> listPostTemp,
+    required IList<PostDetailModel> listPostDb,
     required IList<String> tags,
+    required IList<String> listLikedPost,
   }) = _PostState;
 
   factory PostState.initial() => PostState(
@@ -17,6 +19,8 @@ class PostState with _$PostState {
         optionFailedOrPost: none(),
         listPost: <PostDetailModel>[].toIList(),
         listPostTemp: <PostDetailModel>[].toIList(),
+        listPostDb: <PostDetailModel>[].toIList(),
         tags: <String>[].toIList(),
+        listLikedPost: <String>[].toIList(),
       );
 }

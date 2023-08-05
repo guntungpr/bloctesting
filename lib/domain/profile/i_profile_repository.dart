@@ -9,11 +9,17 @@ abstract class IProfileRepository {
   Future<Either<FailureNetwork, DetailProfileModel>> getDetailProfile({
     required String id,
   });
+  Future<Either<FailureNetwork, List<String>>> getAllFriendsDB();
+  Future<Either<FailureNetwork, Unit>> addFriends({required String id});
   Future<Either<FailureNetwork, PostModel>> getListPost({
     required String id,
     required int page,
   });
   Future<Either<FailureNetwork, PostModel>> getAllListPost({
     required int page,
+  });
+  Future<Either<FailureNetwork, List<PostDetailModel>>> getAllListPostDB();
+  Future<Either<FailureNetwork, Unit>> addPostLiked({
+    required PostDetailModel post,
   });
 }

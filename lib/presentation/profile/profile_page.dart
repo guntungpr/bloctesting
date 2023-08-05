@@ -18,8 +18,10 @@ class ProfilePage extends StatelessWidget {
     final key = PageStorageKey(bloc.state.listProfile.length);
 
     Future refreshData() async {
-      bloc.add(const ProfileEvent.started());
-      bloc.add(const ProfileEvent.getListProfile());
+      bloc
+        ..add(const ProfileEvent.started())
+        ..add(const ProfileEvent.getAllFriends())
+        ..add(const ProfileEvent.getListProfile());
     }
 
     Future loadMore() async {

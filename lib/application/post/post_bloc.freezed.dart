@@ -20,11 +20,11 @@ mixin _$PostEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) =>
       throw _privateConstructorUsedError;
@@ -32,11 +32,11 @@ mixin _$PostEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) =>
       throw _privateConstructorUsedError;
@@ -44,11 +44,11 @@ mixin _$PostEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) =>
@@ -57,11 +57,11 @@ mixin _$PostEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) =>
       throw _privateConstructorUsedError;
@@ -69,11 +69,11 @@ mixin _$PostEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) =>
       throw _privateConstructorUsedError;
@@ -81,11 +81,11 @@ mixin _$PostEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) =>
@@ -148,11 +148,11 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
     return started();
@@ -163,11 +163,11 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
     return started?.call();
@@ -178,11 +178,11 @@ class _$_Started implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
@@ -197,11 +197,11 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return started(this);
@@ -212,11 +212,11 @@ class _$_Started implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return started?.call(this);
@@ -227,11 +227,11 @@ class _$_Started implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -286,11 +286,11 @@ class _$_GetAllListPost implements _GetAllListPost {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
     return getAllListPost();
@@ -301,11 +301,11 @@ class _$_GetAllListPost implements _GetAllListPost {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
     return getAllListPost?.call();
@@ -316,11 +316,11 @@ class _$_GetAllListPost implements _GetAllListPost {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
@@ -335,11 +335,11 @@ class _$_GetAllListPost implements _GetAllListPost {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return getAllListPost(this);
@@ -350,11 +350,11 @@ class _$_GetAllListPost implements _GetAllListPost {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return getAllListPost?.call(this);
@@ -365,11 +365,11 @@ class _$_GetAllListPost implements _GetAllListPost {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -382,6 +382,144 @@ class _$_GetAllListPost implements _GetAllListPost {
 
 abstract class _GetAllListPost implements PostEvent {
   const factory _GetAllListPost() = _$_GetAllListPost;
+}
+
+/// @nodoc
+abstract class _$$_GetAllListPostSQLiteCopyWith<$Res> {
+  factory _$$_GetAllListPostSQLiteCopyWith(_$_GetAllListPostSQLite value,
+          $Res Function(_$_GetAllListPostSQLite) then) =
+      __$$_GetAllListPostSQLiteCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetAllListPostSQLiteCopyWithImpl<$Res>
+    extends _$PostEventCopyWithImpl<$Res, _$_GetAllListPostSQLite>
+    implements _$$_GetAllListPostSQLiteCopyWith<$Res> {
+  __$$_GetAllListPostSQLiteCopyWithImpl(_$_GetAllListPostSQLite _value,
+      $Res Function(_$_GetAllListPostSQLite) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetAllListPostSQLite implements _GetAllListPostSQLite {
+  const _$_GetAllListPostSQLite();
+
+  @override
+  String toString() {
+    return 'PostEvent.getAllListPostSQLite()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetAllListPostSQLite);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
+    required TResult Function(String id) getListPost,
+    required TResult Function() addLimit,
+    required TResult Function(String keyword) searchData,
+    required TResult Function(PostDetailModel post) likeChanged,
+    required TResult Function(String tag) tagSelected,
+  }) {
+    return getAllListPostSQLite();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
+    TResult? Function(String id)? getListPost,
+    TResult? Function()? addLimit,
+    TResult? Function(String keyword)? searchData,
+    TResult? Function(PostDetailModel post)? likeChanged,
+    TResult? Function(String tag)? tagSelected,
+  }) {
+    return getAllListPostSQLite?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
+    TResult Function(String id)? getListPost,
+    TResult Function()? addLimit,
+    TResult Function(String keyword)? searchData,
+    TResult Function(PostDetailModel post)? likeChanged,
+    TResult Function(String tag)? tagSelected,
+    required TResult orElse(),
+  }) {
+    if (getAllListPostSQLite != null) {
+      return getAllListPostSQLite();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
+    required TResult Function(_GetListPost value) getListPost,
+    required TResult Function(_AddLimit value) addLimit,
+    required TResult Function(_SearchData value) searchData,
+    required TResult Function(_LikeChanged value) likeChanged,
+    required TResult Function(_TagSelected value) tagSelected,
+  }) {
+    return getAllListPostSQLite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
+    TResult? Function(_GetListPost value)? getListPost,
+    TResult? Function(_AddLimit value)? addLimit,
+    TResult? Function(_SearchData value)? searchData,
+    TResult? Function(_LikeChanged value)? likeChanged,
+    TResult? Function(_TagSelected value)? tagSelected,
+  }) {
+    return getAllListPostSQLite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
+    TResult Function(_GetListPost value)? getListPost,
+    TResult Function(_AddLimit value)? addLimit,
+    TResult Function(_SearchData value)? searchData,
+    TResult Function(_LikeChanged value)? likeChanged,
+    TResult Function(_TagSelected value)? tagSelected,
+    required TResult orElse(),
+  }) {
+    if (getAllListPostSQLite != null) {
+      return getAllListPostSQLite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllListPostSQLite implements PostEvent {
+  const factory _GetAllListPostSQLite() = _$_GetAllListPostSQLite;
 }
 
 /// @nodoc
@@ -450,11 +588,11 @@ class _$_GetListPost implements _GetListPost {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
     return getListPost(id);
@@ -465,11 +603,11 @@ class _$_GetListPost implements _GetListPost {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
     return getListPost?.call(id);
@@ -480,11 +618,11 @@ class _$_GetListPost implements _GetListPost {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
@@ -499,11 +637,11 @@ class _$_GetListPost implements _GetListPost {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return getListPost(this);
@@ -514,11 +652,11 @@ class _$_GetListPost implements _GetListPost {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return getListPost?.call(this);
@@ -529,11 +667,11 @@ class _$_GetListPost implements _GetListPost {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -593,11 +731,11 @@ class _$_AddLimit implements _AddLimit {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
     return addLimit();
@@ -608,11 +746,11 @@ class _$_AddLimit implements _AddLimit {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
     return addLimit?.call();
@@ -623,11 +761,11 @@ class _$_AddLimit implements _AddLimit {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
@@ -642,11 +780,11 @@ class _$_AddLimit implements _AddLimit {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return addLimit(this);
@@ -657,11 +795,11 @@ class _$_AddLimit implements _AddLimit {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return addLimit?.call(this);
@@ -672,11 +810,11 @@ class _$_AddLimit implements _AddLimit {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -757,11 +895,11 @@ class _$_SearchData implements _SearchData {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
     return searchData(keyword);
@@ -772,11 +910,11 @@ class _$_SearchData implements _SearchData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
     return searchData?.call(keyword);
@@ -787,11 +925,11 @@ class _$_SearchData implements _SearchData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
@@ -806,11 +944,11 @@ class _$_SearchData implements _SearchData {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return searchData(this);
@@ -821,11 +959,11 @@ class _$_SearchData implements _SearchData {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return searchData?.call(this);
@@ -836,11 +974,11 @@ class _$_SearchData implements _SearchData {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -866,7 +1004,9 @@ abstract class _$$_LikeChangedCopyWith<$Res> {
           _$_LikeChanged value, $Res Function(_$_LikeChanged) then) =
       __$$_LikeChangedCopyWithImpl<$Res>;
   @useResult
-  $Res call({bool status});
+  $Res call({PostDetailModel post});
+
+  $PostDetailModelCopyWith<$Res> get post;
 }
 
 /// @nodoc
@@ -880,28 +1020,36 @@ class __$$_LikeChangedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? post = null,
   }) {
     return _then(_$_LikeChanged(
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as bool,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as PostDetailModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PostDetailModelCopyWith<$Res> get post {
+    return $PostDetailModelCopyWith<$Res>(_value.post, (value) {
+      return _then(_value.copyWith(post: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$_LikeChanged implements _LikeChanged {
-  const _$_LikeChanged({required this.status});
+  const _$_LikeChanged({required this.post});
 
   @override
-  final bool status;
+  final PostDetailModel post;
 
   @override
   String toString() {
-    return 'PostEvent.likeChanged(status: $status)';
+    return 'PostEvent.likeChanged(post: $post)';
   }
 
   @override
@@ -909,11 +1057,11 @@ class _$_LikeChanged implements _LikeChanged {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LikeChanged &&
-            (identical(other.status, status) || other.status == status));
+            (identical(other.post, post) || other.post == post));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status);
+  int get hashCode => Object.hash(runtimeType, post);
 
   @JsonKey(ignore: true)
   @override
@@ -926,14 +1074,14 @@ class _$_LikeChanged implements _LikeChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
-    return likeChanged(status);
+    return likeChanged(post);
   }
 
   @override
@@ -941,14 +1089,14 @@ class _$_LikeChanged implements _LikeChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
-    return likeChanged?.call(status);
+    return likeChanged?.call(post);
   }
 
   @override
@@ -956,16 +1104,16 @@ class _$_LikeChanged implements _LikeChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
     if (likeChanged != null) {
-      return likeChanged(status);
+      return likeChanged(post);
     }
     return orElse();
   }
@@ -975,11 +1123,11 @@ class _$_LikeChanged implements _LikeChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return likeChanged(this);
@@ -990,11 +1138,11 @@ class _$_LikeChanged implements _LikeChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return likeChanged?.call(this);
@@ -1005,11 +1153,11 @@ class _$_LikeChanged implements _LikeChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -1021,181 +1169,12 @@ class _$_LikeChanged implements _LikeChanged {
 }
 
 abstract class _LikeChanged implements PostEvent {
-  const factory _LikeChanged({required final bool status}) = _$_LikeChanged;
+  const factory _LikeChanged({required final PostDetailModel post}) =
+      _$_LikeChanged;
 
-  bool get status;
+  PostDetailModel get post;
   @JsonKey(ignore: true)
   _$$_LikeChangedCopyWith<_$_LikeChanged> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$_AddFriendChangedCopyWith<$Res> {
-  factory _$$_AddFriendChangedCopyWith(
-          _$_AddFriendChanged value, $Res Function(_$_AddFriendChanged) then) =
-      __$$_AddFriendChangedCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool status});
-}
-
-/// @nodoc
-class __$$_AddFriendChangedCopyWithImpl<$Res>
-    extends _$PostEventCopyWithImpl<$Res, _$_AddFriendChanged>
-    implements _$$_AddFriendChangedCopyWith<$Res> {
-  __$$_AddFriendChangedCopyWithImpl(
-      _$_AddFriendChanged _value, $Res Function(_$_AddFriendChanged) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? status = null,
-  }) {
-    return _then(_$_AddFriendChanged(
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_AddFriendChanged implements _AddFriendChanged {
-  const _$_AddFriendChanged({required this.status});
-
-  @override
-  final bool status;
-
-  @override
-  String toString() {
-    return 'PostEvent.addFriendChanged(status: $status)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_AddFriendChanged &&
-            (identical(other.status, status) || other.status == status));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, status);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_AddFriendChangedCopyWith<_$_AddFriendChanged> get copyWith =>
-      __$$_AddFriendChangedCopyWithImpl<_$_AddFriendChanged>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getAllListPost,
-    required TResult Function(String id) getListPost,
-    required TResult Function() addLimit,
-    required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
-    required TResult Function(String tag) tagSelected,
-  }) {
-    return addFriendChanged(status);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getAllListPost,
-    TResult? Function(String id)? getListPost,
-    TResult? Function()? addLimit,
-    TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
-    TResult? Function(String tag)? tagSelected,
-  }) {
-    return addFriendChanged?.call(status);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getAllListPost,
-    TResult Function(String id)? getListPost,
-    TResult Function()? addLimit,
-    TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
-    TResult Function(String tag)? tagSelected,
-    required TResult orElse(),
-  }) {
-    if (addFriendChanged != null) {
-      return addFriendChanged(status);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetAllListPost value) getAllListPost,
-    required TResult Function(_GetListPost value) getListPost,
-    required TResult Function(_AddLimit value) addLimit,
-    required TResult Function(_SearchData value) searchData,
-    required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
-    required TResult Function(_TagSelected value) tagSelected,
-  }) {
-    return addFriendChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllListPost value)? getAllListPost,
-    TResult? Function(_GetListPost value)? getListPost,
-    TResult? Function(_AddLimit value)? addLimit,
-    TResult? Function(_SearchData value)? searchData,
-    TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
-    TResult? Function(_TagSelected value)? tagSelected,
-  }) {
-    return addFriendChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetAllListPost value)? getAllListPost,
-    TResult Function(_GetListPost value)? getListPost,
-    TResult Function(_AddLimit value)? addLimit,
-    TResult Function(_SearchData value)? searchData,
-    TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
-    TResult Function(_TagSelected value)? tagSelected,
-    required TResult orElse(),
-  }) {
-    if (addFriendChanged != null) {
-      return addFriendChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _AddFriendChanged implements PostEvent {
-  const factory _AddFriendChanged({required final bool status}) =
-      _$_AddFriendChanged;
-
-  bool get status;
-  @JsonKey(ignore: true)
-  _$$_AddFriendChangedCopyWith<_$_AddFriendChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1265,11 +1244,11 @@ class _$_TagSelected implements _TagSelected {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllListPost,
+    required TResult Function() getAllListPostSQLite,
     required TResult Function(String id) getListPost,
     required TResult Function() addLimit,
     required TResult Function(String keyword) searchData,
-    required TResult Function(bool status) likeChanged,
-    required TResult Function(bool status) addFriendChanged,
+    required TResult Function(PostDetailModel post) likeChanged,
     required TResult Function(String tag) tagSelected,
   }) {
     return tagSelected(tag);
@@ -1280,11 +1259,11 @@ class _$_TagSelected implements _TagSelected {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllListPost,
+    TResult? Function()? getAllListPostSQLite,
     TResult? Function(String id)? getListPost,
     TResult? Function()? addLimit,
     TResult? Function(String keyword)? searchData,
-    TResult? Function(bool status)? likeChanged,
-    TResult? Function(bool status)? addFriendChanged,
+    TResult? Function(PostDetailModel post)? likeChanged,
     TResult? Function(String tag)? tagSelected,
   }) {
     return tagSelected?.call(tag);
@@ -1295,11 +1274,11 @@ class _$_TagSelected implements _TagSelected {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllListPost,
+    TResult Function()? getAllListPostSQLite,
     TResult Function(String id)? getListPost,
     TResult Function()? addLimit,
     TResult Function(String keyword)? searchData,
-    TResult Function(bool status)? likeChanged,
-    TResult Function(bool status)? addFriendChanged,
+    TResult Function(PostDetailModel post)? likeChanged,
     TResult Function(String tag)? tagSelected,
     required TResult orElse(),
   }) {
@@ -1314,11 +1293,11 @@ class _$_TagSelected implements _TagSelected {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllListPost value) getAllListPost,
+    required TResult Function(_GetAllListPostSQLite value) getAllListPostSQLite,
     required TResult Function(_GetListPost value) getListPost,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_SearchData value) searchData,
     required TResult Function(_LikeChanged value) likeChanged,
-    required TResult Function(_AddFriendChanged value) addFriendChanged,
     required TResult Function(_TagSelected value) tagSelected,
   }) {
     return tagSelected(this);
@@ -1329,11 +1308,11 @@ class _$_TagSelected implements _TagSelected {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllListPost value)? getAllListPost,
+    TResult? Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult? Function(_GetListPost value)? getListPost,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_SearchData value)? searchData,
     TResult? Function(_LikeChanged value)? likeChanged,
-    TResult? Function(_AddFriendChanged value)? addFriendChanged,
     TResult? Function(_TagSelected value)? tagSelected,
   }) {
     return tagSelected?.call(this);
@@ -1344,11 +1323,11 @@ class _$_TagSelected implements _TagSelected {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllListPost value)? getAllListPost,
+    TResult Function(_GetAllListPostSQLite value)? getAllListPostSQLite,
     TResult Function(_GetListPost value)? getListPost,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_SearchData value)? searchData,
     TResult Function(_LikeChanged value)? likeChanged,
-    TResult Function(_AddFriendChanged value)? addFriendChanged,
     TResult Function(_TagSelected value)? tagSelected,
     required TResult orElse(),
   }) {
@@ -1376,7 +1355,9 @@ mixin _$PostState {
       throw _privateConstructorUsedError;
   IList<PostDetailModel> get listPost => throw _privateConstructorUsedError;
   IList<PostDetailModel> get listPostTemp => throw _privateConstructorUsedError;
+  IList<PostDetailModel> get listPostDb => throw _privateConstructorUsedError;
   IList<String> get tags => throw _privateConstructorUsedError;
+  IList<String> get listLikedPost => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PostStateCopyWith<PostState> get copyWith =>
@@ -1394,7 +1375,9 @@ abstract class $PostStateCopyWith<$Res> {
       Option<Either<FailureNetwork, PostModel>> optionFailedOrPost,
       IList<PostDetailModel> listPost,
       IList<PostDetailModel> listPostTemp,
-      IList<String> tags});
+      IList<PostDetailModel> listPostDb,
+      IList<String> tags,
+      IList<String> listLikedPost});
 }
 
 /// @nodoc
@@ -1415,7 +1398,9 @@ class _$PostStateCopyWithImpl<$Res, $Val extends PostState>
     Object? optionFailedOrPost = null,
     Object? listPost = null,
     Object? listPostTemp = null,
+    Object? listPostDb = null,
     Object? tags = null,
+    Object? listLikedPost = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -1438,9 +1423,17 @@ class _$PostStateCopyWithImpl<$Res, $Val extends PostState>
           ? _value.listPostTemp
           : listPostTemp // ignore: cast_nullable_to_non_nullable
               as IList<PostDetailModel>,
+      listPostDb: null == listPostDb
+          ? _value.listPostDb
+          : listPostDb // ignore: cast_nullable_to_non_nullable
+              as IList<PostDetailModel>,
       tags: null == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
+              as IList<String>,
+      listLikedPost: null == listLikedPost
+          ? _value.listLikedPost
+          : listLikedPost // ignore: cast_nullable_to_non_nullable
               as IList<String>,
     ) as $Val);
   }
@@ -1459,7 +1452,9 @@ abstract class _$$_PostStateCopyWith<$Res> implements $PostStateCopyWith<$Res> {
       Option<Either<FailureNetwork, PostModel>> optionFailedOrPost,
       IList<PostDetailModel> listPost,
       IList<PostDetailModel> listPostTemp,
-      IList<String> tags});
+      IList<PostDetailModel> listPostDb,
+      IList<String> tags,
+      IList<String> listLikedPost});
 }
 
 /// @nodoc
@@ -1478,7 +1473,9 @@ class __$$_PostStateCopyWithImpl<$Res>
     Object? optionFailedOrPost = null,
     Object? listPost = null,
     Object? listPostTemp = null,
+    Object? listPostDb = null,
     Object? tags = null,
+    Object? listLikedPost = null,
   }) {
     return _then(_$_PostState(
       isLoading: null == isLoading
@@ -1501,9 +1498,17 @@ class __$$_PostStateCopyWithImpl<$Res>
           ? _value.listPostTemp
           : listPostTemp // ignore: cast_nullable_to_non_nullable
               as IList<PostDetailModel>,
+      listPostDb: null == listPostDb
+          ? _value.listPostDb
+          : listPostDb // ignore: cast_nullable_to_non_nullable
+              as IList<PostDetailModel>,
       tags: null == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
+              as IList<String>,
+      listLikedPost: null == listLikedPost
+          ? _value.listLikedPost
+          : listLikedPost // ignore: cast_nullable_to_non_nullable
               as IList<String>,
     ));
   }
@@ -1518,7 +1523,9 @@ class _$_PostState implements _PostState {
       required this.optionFailedOrPost,
       required this.listPost,
       required this.listPostTemp,
-      required this.tags});
+      required this.listPostDb,
+      required this.tags,
+      required this.listLikedPost});
 
   @override
   final bool isLoading;
@@ -1531,11 +1538,15 @@ class _$_PostState implements _PostState {
   @override
   final IList<PostDetailModel> listPostTemp;
   @override
+  final IList<PostDetailModel> listPostDb;
+  @override
   final IList<String> tags;
+  @override
+  final IList<String> listLikedPost;
 
   @override
   String toString() {
-    return 'PostState(isLoading: $isLoading, page: $page, optionFailedOrPost: $optionFailedOrPost, listPost: $listPost, listPostTemp: $listPostTemp, tags: $tags)';
+    return 'PostState(isLoading: $isLoading, page: $page, optionFailedOrPost: $optionFailedOrPost, listPost: $listPost, listPostTemp: $listPostTemp, listPostDb: $listPostDb, tags: $tags, listLikedPost: $listLikedPost)';
   }
 
   @override
@@ -1551,7 +1562,11 @@ class _$_PostState implements _PostState {
             const DeepCollectionEquality().equals(other.listPost, listPost) &&
             const DeepCollectionEquality()
                 .equals(other.listPostTemp, listPostTemp) &&
-            const DeepCollectionEquality().equals(other.tags, tags));
+            const DeepCollectionEquality()
+                .equals(other.listPostDb, listPostDb) &&
+            const DeepCollectionEquality().equals(other.tags, tags) &&
+            const DeepCollectionEquality()
+                .equals(other.listLikedPost, listLikedPost));
   }
 
   @override
@@ -1562,7 +1577,9 @@ class _$_PostState implements _PostState {
       optionFailedOrPost,
       const DeepCollectionEquality().hash(listPost),
       const DeepCollectionEquality().hash(listPostTemp),
-      const DeepCollectionEquality().hash(tags));
+      const DeepCollectionEquality().hash(listPostDb),
+      const DeepCollectionEquality().hash(tags),
+      const DeepCollectionEquality().hash(listLikedPost));
 
   @JsonKey(ignore: true)
   @override
@@ -1579,7 +1596,9 @@ abstract class _PostState implements PostState {
           optionFailedOrPost,
       required final IList<PostDetailModel> listPost,
       required final IList<PostDetailModel> listPostTemp,
-      required final IList<String> tags}) = _$_PostState;
+      required final IList<PostDetailModel> listPostDb,
+      required final IList<String> tags,
+      required final IList<String> listLikedPost}) = _$_PostState;
 
   @override
   bool get isLoading;
@@ -1592,7 +1611,11 @@ abstract class _PostState implements PostState {
   @override
   IList<PostDetailModel> get listPostTemp;
   @override
+  IList<PostDetailModel> get listPostDb;
+  @override
   IList<String> get tags;
+  @override
+  IList<String> get listLikedPost;
   @override
   @JsonKey(ignore: true)
   _$$_PostStateCopyWith<_$_PostState> get copyWith =>

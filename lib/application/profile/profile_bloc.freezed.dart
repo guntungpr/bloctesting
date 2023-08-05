@@ -22,6 +22,8 @@ mixin _$ProfileEvent {
     required TResult Function() getListProfile,
     required TResult Function() addLimit,
     required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$ProfileEvent {
     TResult? Function()? getListProfile,
     TResult? Function()? addLimit,
     TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$ProfileEvent {
     TResult Function()? getListProfile,
     TResult Function()? addLimit,
     TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$ProfileEvent {
     required TResult Function(_GetListProfile value) getListProfile,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$ProfileEvent {
     TResult? Function(_GetListProfile value)? getListProfile,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$ProfileEvent {
     TResult Function(_GetListProfile value)? getListProfile,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +139,8 @@ class _$_Started implements _Started {
     required TResult Function() getListProfile,
     required TResult Function() addLimit,
     required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
   }) {
     return started();
   }
@@ -138,6 +152,8 @@ class _$_Started implements _Started {
     TResult? Function()? getListProfile,
     TResult? Function()? addLimit,
     TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
   }) {
     return started?.call();
   }
@@ -149,6 +165,8 @@ class _$_Started implements _Started {
     TResult Function()? getListProfile,
     TResult Function()? addLimit,
     TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -164,6 +182,8 @@ class _$_Started implements _Started {
     required TResult Function(_GetListProfile value) getListProfile,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
   }) {
     return started(this);
   }
@@ -175,6 +195,8 @@ class _$_Started implements _Started {
     TResult? Function(_GetListProfile value)? getListProfile,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
   }) {
     return started?.call(this);
   }
@@ -186,6 +208,8 @@ class _$_Started implements _Started {
     TResult Function(_GetListProfile value)? getListProfile,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -241,6 +265,8 @@ class _$_GetListProfile implements _GetListProfile {
     required TResult Function() getListProfile,
     required TResult Function() addLimit,
     required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
   }) {
     return getListProfile();
   }
@@ -252,6 +278,8 @@ class _$_GetListProfile implements _GetListProfile {
     TResult? Function()? getListProfile,
     TResult? Function()? addLimit,
     TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
   }) {
     return getListProfile?.call();
   }
@@ -263,6 +291,8 @@ class _$_GetListProfile implements _GetListProfile {
     TResult Function()? getListProfile,
     TResult Function()? addLimit,
     TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
     required TResult orElse(),
   }) {
     if (getListProfile != null) {
@@ -278,6 +308,8 @@ class _$_GetListProfile implements _GetListProfile {
     required TResult Function(_GetListProfile value) getListProfile,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
   }) {
     return getListProfile(this);
   }
@@ -289,6 +321,8 @@ class _$_GetListProfile implements _GetListProfile {
     TResult? Function(_GetListProfile value)? getListProfile,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
   }) {
     return getListProfile?.call(this);
   }
@@ -300,6 +334,8 @@ class _$_GetListProfile implements _GetListProfile {
     TResult Function(_GetListProfile value)? getListProfile,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
     required TResult orElse(),
   }) {
     if (getListProfile != null) {
@@ -355,6 +391,8 @@ class _$_AddLimit implements _AddLimit {
     required TResult Function() getListProfile,
     required TResult Function() addLimit,
     required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
   }) {
     return addLimit();
   }
@@ -366,6 +404,8 @@ class _$_AddLimit implements _AddLimit {
     TResult? Function()? getListProfile,
     TResult? Function()? addLimit,
     TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
   }) {
     return addLimit?.call();
   }
@@ -377,6 +417,8 @@ class _$_AddLimit implements _AddLimit {
     TResult Function()? getListProfile,
     TResult Function()? addLimit,
     TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
     required TResult orElse(),
   }) {
     if (addLimit != null) {
@@ -392,6 +434,8 @@ class _$_AddLimit implements _AddLimit {
     required TResult Function(_GetListProfile value) getListProfile,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
   }) {
     return addLimit(this);
   }
@@ -403,6 +447,8 @@ class _$_AddLimit implements _AddLimit {
     TResult? Function(_GetListProfile value)? getListProfile,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
   }) {
     return addLimit?.call(this);
   }
@@ -414,6 +460,8 @@ class _$_AddLimit implements _AddLimit {
     TResult Function(_GetListProfile value)? getListProfile,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
     required TResult orElse(),
   }) {
     if (addLimit != null) {
@@ -495,6 +543,8 @@ class _$_GetDetailProfile implements _GetDetailProfile {
     required TResult Function() getListProfile,
     required TResult Function() addLimit,
     required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
   }) {
     return getDetailProfile(id);
   }
@@ -506,6 +556,8 @@ class _$_GetDetailProfile implements _GetDetailProfile {
     TResult? Function()? getListProfile,
     TResult? Function()? addLimit,
     TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
   }) {
     return getDetailProfile?.call(id);
   }
@@ -517,6 +569,8 @@ class _$_GetDetailProfile implements _GetDetailProfile {
     TResult Function()? getListProfile,
     TResult Function()? addLimit,
     TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
     required TResult orElse(),
   }) {
     if (getDetailProfile != null) {
@@ -532,6 +586,8 @@ class _$_GetDetailProfile implements _GetDetailProfile {
     required TResult Function(_GetListProfile value) getListProfile,
     required TResult Function(_AddLimit value) addLimit,
     required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
   }) {
     return getDetailProfile(this);
   }
@@ -543,6 +599,8 @@ class _$_GetDetailProfile implements _GetDetailProfile {
     TResult? Function(_GetListProfile value)? getListProfile,
     TResult? Function(_AddLimit value)? addLimit,
     TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
   }) {
     return getDetailProfile?.call(this);
   }
@@ -554,6 +612,8 @@ class _$_GetDetailProfile implements _GetDetailProfile {
     TResult Function(_GetListProfile value)? getListProfile,
     TResult Function(_AddLimit value)? addLimit,
     TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
     required TResult orElse(),
   }) {
     if (getDetailProfile != null) {
@@ -574,6 +634,290 @@ abstract class _GetDetailProfile implements ProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$_AddFriendChangedCopyWith<$Res> {
+  factory _$$_AddFriendChangedCopyWith(
+          _$_AddFriendChanged value, $Res Function(_$_AddFriendChanged) then) =
+      __$$_AddFriendChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String id});
+}
+
+/// @nodoc
+class __$$_AddFriendChangedCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$_AddFriendChanged>
+    implements _$$_AddFriendChangedCopyWith<$Res> {
+  __$$_AddFriendChangedCopyWithImpl(
+      _$_AddFriendChanged _value, $Res Function(_$_AddFriendChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$_AddFriendChanged(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_AddFriendChanged implements _AddFriendChanged {
+  const _$_AddFriendChanged({required this.id});
+
+  @override
+  final String id;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.addFriendChanged(id: $id)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AddFriendChanged &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AddFriendChangedCopyWith<_$_AddFriendChanged> get copyWith =>
+      __$$_AddFriendChangedCopyWithImpl<_$_AddFriendChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getListProfile,
+    required TResult Function() addLimit,
+    required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
+  }) {
+    return addFriendChanged(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getListProfile,
+    TResult? Function()? addLimit,
+    TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
+  }) {
+    return addFriendChanged?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getListProfile,
+    TResult Function()? addLimit,
+    TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
+    required TResult orElse(),
+  }) {
+    if (addFriendChanged != null) {
+      return addFriendChanged(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetListProfile value) getListProfile,
+    required TResult Function(_AddLimit value) addLimit,
+    required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
+  }) {
+    return addFriendChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetListProfile value)? getListProfile,
+    TResult? Function(_AddLimit value)? addLimit,
+    TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
+  }) {
+    return addFriendChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetListProfile value)? getListProfile,
+    TResult Function(_AddLimit value)? addLimit,
+    TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
+    required TResult orElse(),
+  }) {
+    if (addFriendChanged != null) {
+      return addFriendChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddFriendChanged implements ProfileEvent {
+  const factory _AddFriendChanged({required final String id}) =
+      _$_AddFriendChanged;
+
+  String get id;
+  @JsonKey(ignore: true)
+  _$$_AddFriendChangedCopyWith<_$_AddFriendChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetAllFriendsCopyWith<$Res> {
+  factory _$$_GetAllFriendsCopyWith(
+          _$_GetAllFriends value, $Res Function(_$_GetAllFriends) then) =
+      __$$_GetAllFriendsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetAllFriendsCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$_GetAllFriends>
+    implements _$$_GetAllFriendsCopyWith<$Res> {
+  __$$_GetAllFriendsCopyWithImpl(
+      _$_GetAllFriends _value, $Res Function(_$_GetAllFriends) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetAllFriends implements _GetAllFriends {
+  const _$_GetAllFriends();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getAllFriends()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetAllFriends);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getListProfile,
+    required TResult Function() addLimit,
+    required TResult Function(String id) getDetailProfile,
+    required TResult Function(String id) addFriendChanged,
+    required TResult Function() getAllFriends,
+  }) {
+    return getAllFriends();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getListProfile,
+    TResult? Function()? addLimit,
+    TResult? Function(String id)? getDetailProfile,
+    TResult? Function(String id)? addFriendChanged,
+    TResult? Function()? getAllFriends,
+  }) {
+    return getAllFriends?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getListProfile,
+    TResult Function()? addLimit,
+    TResult Function(String id)? getDetailProfile,
+    TResult Function(String id)? addFriendChanged,
+    TResult Function()? getAllFriends,
+    required TResult orElse(),
+  }) {
+    if (getAllFriends != null) {
+      return getAllFriends();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetListProfile value) getListProfile,
+    required TResult Function(_AddLimit value) addLimit,
+    required TResult Function(_GetDetailProfile value) getDetailProfile,
+    required TResult Function(_AddFriendChanged value) addFriendChanged,
+    required TResult Function(_GetAllFriends value) getAllFriends,
+  }) {
+    return getAllFriends(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetListProfile value)? getListProfile,
+    TResult? Function(_AddLimit value)? addLimit,
+    TResult? Function(_GetDetailProfile value)? getDetailProfile,
+    TResult? Function(_AddFriendChanged value)? addFriendChanged,
+    TResult? Function(_GetAllFriends value)? getAllFriends,
+  }) {
+    return getAllFriends?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetListProfile value)? getListProfile,
+    TResult Function(_AddLimit value)? addLimit,
+    TResult Function(_GetDetailProfile value)? getDetailProfile,
+    TResult Function(_AddFriendChanged value)? addFriendChanged,
+    TResult Function(_GetAllFriends value)? getAllFriends,
+    required TResult orElse(),
+  }) {
+    if (getAllFriends != null) {
+      return getAllFriends(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllFriends implements ProfileEvent {
+  const factory _GetAllFriends() = _$_GetAllFriends;
+}
+
+/// @nodoc
 mixin _$ProfileState {
   bool get isLoading => throw _privateConstructorUsedError;
   int get page => throw _privateConstructorUsedError;
@@ -582,6 +926,7 @@ mixin _$ProfileState {
   Option<Either<FailureNetwork, DetailProfileModel>>
       get optionFailedOrDetailProfile => throw _privateConstructorUsedError;
   IList<ProfileDetail> get listProfile => throw _privateConstructorUsedError;
+  IList<String> get listFriends => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProfileStateCopyWith<ProfileState> get copyWith =>
@@ -600,7 +945,8 @@ abstract class $ProfileStateCopyWith<$Res> {
       Option<Either<FailureNetwork, ProfileModel>> optionFailedOrProfile,
       Option<Either<FailureNetwork, DetailProfileModel>>
           optionFailedOrDetailProfile,
-      IList<ProfileDetail> listProfile});
+      IList<ProfileDetail> listProfile,
+      IList<String> listFriends});
 }
 
 /// @nodoc
@@ -621,6 +967,7 @@ class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
     Object? optionFailedOrProfile = null,
     Object? optionFailedOrDetailProfile = null,
     Object? listProfile = null,
+    Object? listFriends = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -643,6 +990,10 @@ class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
           ? _value.listProfile
           : listProfile // ignore: cast_nullable_to_non_nullable
               as IList<ProfileDetail>,
+      listFriends: null == listFriends
+          ? _value.listFriends
+          : listFriends // ignore: cast_nullable_to_non_nullable
+              as IList<String>,
     ) as $Val);
   }
 }
@@ -661,7 +1012,8 @@ abstract class _$$_ProfileStateCopyWith<$Res>
       Option<Either<FailureNetwork, ProfileModel>> optionFailedOrProfile,
       Option<Either<FailureNetwork, DetailProfileModel>>
           optionFailedOrDetailProfile,
-      IList<ProfileDetail> listProfile});
+      IList<ProfileDetail> listProfile,
+      IList<String> listFriends});
 }
 
 /// @nodoc
@@ -680,6 +1032,7 @@ class __$$_ProfileStateCopyWithImpl<$Res>
     Object? optionFailedOrProfile = null,
     Object? optionFailedOrDetailProfile = null,
     Object? listProfile = null,
+    Object? listFriends = null,
   }) {
     return _then(_$_ProfileState(
       isLoading: null == isLoading
@@ -702,6 +1055,10 @@ class __$$_ProfileStateCopyWithImpl<$Res>
           ? _value.listProfile
           : listProfile // ignore: cast_nullable_to_non_nullable
               as IList<ProfileDetail>,
+      listFriends: null == listFriends
+          ? _value.listFriends
+          : listFriends // ignore: cast_nullable_to_non_nullable
+              as IList<String>,
     ));
   }
 }
@@ -714,7 +1071,8 @@ class _$_ProfileState implements _ProfileState {
       required this.page,
       required this.optionFailedOrProfile,
       required this.optionFailedOrDetailProfile,
-      required this.listProfile});
+      required this.listProfile,
+      required this.listFriends});
 
   @override
   final bool isLoading;
@@ -727,10 +1085,12 @@ class _$_ProfileState implements _ProfileState {
       optionFailedOrDetailProfile;
   @override
   final IList<ProfileDetail> listProfile;
+  @override
+  final IList<String> listFriends;
 
   @override
   String toString() {
-    return 'ProfileState(isLoading: $isLoading, page: $page, optionFailedOrProfile: $optionFailedOrProfile, optionFailedOrDetailProfile: $optionFailedOrDetailProfile, listProfile: $listProfile)';
+    return 'ProfileState(isLoading: $isLoading, page: $page, optionFailedOrProfile: $optionFailedOrProfile, optionFailedOrDetailProfile: $optionFailedOrDetailProfile, listProfile: $listProfile, listFriends: $listFriends)';
   }
 
   @override
@@ -748,7 +1108,9 @@ class _$_ProfileState implements _ProfileState {
                 other.optionFailedOrDetailProfile ==
                     optionFailedOrDetailProfile) &&
             const DeepCollectionEquality()
-                .equals(other.listProfile, listProfile));
+                .equals(other.listProfile, listProfile) &&
+            const DeepCollectionEquality()
+                .equals(other.listFriends, listFriends));
   }
 
   @override
@@ -758,7 +1120,8 @@ class _$_ProfileState implements _ProfileState {
       page,
       optionFailedOrProfile,
       optionFailedOrDetailProfile,
-      const DeepCollectionEquality().hash(listProfile));
+      const DeepCollectionEquality().hash(listProfile),
+      const DeepCollectionEquality().hash(listFriends));
 
   @JsonKey(ignore: true)
   @override
@@ -775,7 +1138,8 @@ abstract class _ProfileState implements ProfileState {
           optionFailedOrProfile,
       required final Option<Either<FailureNetwork, DetailProfileModel>>
           optionFailedOrDetailProfile,
-      required final IList<ProfileDetail> listProfile}) = _$_ProfileState;
+      required final IList<ProfileDetail> listProfile,
+      required final IList<String> listFriends}) = _$_ProfileState;
 
   @override
   bool get isLoading;
@@ -788,6 +1152,8 @@ abstract class _ProfileState implements ProfileState {
       get optionFailedOrDetailProfile;
   @override
   IList<ProfileDetail> get listProfile;
+  @override
+  IList<String> get listFriends;
   @override
   @JsonKey(ignore: true)
   _$$_ProfileStateCopyWith<_$_ProfileState> get copyWith =>

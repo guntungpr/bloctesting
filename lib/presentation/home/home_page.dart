@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     List<Widget> _listBody = [
       ProfilePage(),
       PostPage(),
-      ProfilePage(),
+      LikePage(),
     ];
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {

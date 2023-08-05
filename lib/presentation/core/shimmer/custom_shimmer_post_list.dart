@@ -11,7 +11,7 @@ class CustomShimmerPostList extends StatelessWidget {
     return ListView.separated(
       separatorBuilder: (context, index) => const SizedBox(height: 20),
       shrinkWrap: true,
-      itemBuilder: (context, index) => const Skelton(height: 200),
+      itemBuilder: (context, index) => const Skelton(height: 400),
       itemCount: 2,
     );
   }

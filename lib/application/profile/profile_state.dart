@@ -9,6 +9,7 @@ class ProfileState with _$ProfileState {
     required Option<Either<FailureNetwork, DetailProfileModel>>
         optionFailedOrDetailProfile,
     required IList<ProfileDetail> listProfile,
+    required IList<String> listFriends,
   }) = _ProfileState;
 
   factory ProfileState.initial() => ProfileState(
@@ -17,5 +18,6 @@ class ProfileState with _$ProfileState {
         optionFailedOrProfile: none(),
         optionFailedOrDetailProfile: none(),
         listProfile: <ProfileDetail>[].toIList(),
+        listFriends: <String>[].toIList(),
       );
 }

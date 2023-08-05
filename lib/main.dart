@@ -1,6 +1,7 @@
 import 'package:bloctesting/application/home/home_bloc.dart';
 import 'package:bloctesting/application/post/post_bloc.dart';
 import 'package:bloctesting/application/profile/profile_bloc.dart';
+import 'package:bloctesting/infrastructure/db/db_helper.dart';
 import 'package:bloctesting/injection.dart';
 import 'package:bloctesting/presentation/routers.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,8 @@ import 'package:injectable/injectable.dart';
 
 void main() async {
   await configureInjection(Environment.dev);
+  WidgetsFlutterBinding.ensureInitialized();
+  await DBHelper().initDb();
   runApp(const MyApp());
 }
 
@@ -32,6 +35,7 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (context) => getIt<ProfileBloc>()
+              ..add(const ProfileEvent.getAllFriends())
               ..add(
                 const ProfileEvent.getListProfile(),
               ),

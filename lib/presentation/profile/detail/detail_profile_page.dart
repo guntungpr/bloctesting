@@ -1,4 +1,5 @@
 import 'package:bloctesting/application/post/post_bloc.dart';
+import 'package:bloctesting/application/profile/profile_bloc.dart';
 import 'package:bloctesting/infrastructure/profile/models/detail/detail_profile_model.dart';
 import 'package:bloctesting/presentation/core/shimmer/custom_shimmer_post_list.dart';
 import 'package:bloctesting/presentation/core/utils/common_utils.dart';
@@ -18,7 +19,10 @@ class DetailProfilePage extends StatelessWidget {
     final key = PageStorageKey(blocPost.state.listPostTemp.isNotEmpty
         ? blocPost.state.listPostTemp.length
         : blocPost.state.listPost);
-    blocPost.add(PostEvent.getListPost(id: detail.id));
+    blocPost
+      ..add(const PostEvent.started())
+      ..add(PostEvent.getListPost(id: detail.id))
+      ..add(const PostEvent.getAllListPostSQLite());
 
     Future refreshData() async {
       blocPost.add(const PostEvent.started());
@@ -68,139 +72,169 @@ class DetailProfilePage extends StatelessWidget {
             ),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(20),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+        body: BlocBuilder<ProfileBloc, ProfileState>(
+          builder: (context, stateProfile) {
+            return Padding(
+              padding: const EdgeInsets.all(20),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 7),
-                    const Icon(Icons.person_add_outlined, size: 50),
-                    const SizedBox(width: 20),
-                    Column(
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Container(
-                          width: 130,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image: NetworkImage(detail.picture),
-                              fit: BoxFit.fill,
+                        SizedBox(width: MediaQuery.of(context).size.width / 10),
+                        IconButton(
+                            onPressed: () => context
+                                .read<ProfileBloc>()
+                                .add(ProfileEvent.addFriendChanged(id: detail.id)),
+                            icon: Icon(
+                              context
+                                      .read<ProfileBloc>()
+                                      .state
+                                      .listFriends
+                                      .contains(detail.id)
+                                  ? Icons.person_remove
+                                  : Icons.person_add_outlined,
+                              size: 50,
+                              color: context
+                                      .read<ProfileBloc>()
+                                      .state
+                                      .listFriends
+                                      .contains(detail.id)
+                                  ? Colors.green
+                                  : Colors.blue,
+                            )),
+                        const SizedBox(width: 20),
+                        Column(
+                          children: [
+                            Container(
+                              width: 130,
+                              height: 130,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image: NetworkImage(detail.picture),
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Text(
-                          '${detail.firstName} ${detail.lastName}',
-                          style: const TextStyle(fontSize: 25, color: Colors.grey),
+                            const SizedBox(height: 20),
+                            Text(
+                              '${detail.firstName} ${detail.lastName}',
+                              style: const TextStyle(fontSize: 25, color: Colors.grey),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  children: [
-                    const Text(
-                      'Gender : ',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        const Text(
+                          'Gender : ',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(detail.gender)
+                      ],
                     ),
-                    Text(detail.gender)
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  children: [
-                    const Text(
-                      'Date Of Birth : ',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        const Text(
+                          'Date Of Birth : ',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(CommonUtils.dateFormat('dd-MMM-yyyy', detail.dateOfBirth))
+                      ],
                     ),
-                    Text(CommonUtils.dateFormat('dd-MMM-yyyy', detail.dateOfBirth))
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  children: [
-                    const Text(
-                      'Join From : ',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        const Text(
+                          'Join From : ',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(CommonUtils.dateFormat('dd-MMM-yyyy', detail.registerDate))
+                      ],
                     ),
-                    Text(CommonUtils.dateFormat('dd-MMM-yyyy', detail.registerDate))
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  children: [
-                    const Text(
-                      'Email : ',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        const Text(
+                          'Email : ',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(detail.email)
+                      ],
                     ),
-                    Text(detail.email)
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Address : ',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 20),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Address : ',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Expanded(
+                          child: Text(
+                              '${detail.location.street}, ${detail.location.city}, ${detail.location.country}'),
+                        )
+                      ],
                     ),
-                    Expanded(
-                      child: Text(
-                          '${detail.location.street}, ${detail.location.city}, ${detail.location.country}'),
+                    const SizedBox(height: 20),
+                    const Divider(thickness: 2),
+                    const SizedBox(height: 20),
+                    BlocConsumer<PostBloc, PostState>(
+                      listener: (context, state) {},
+                      builder: (context, state) {
+                        return state.isLoading
+                            ? const CustomShimmerPostList()
+                            : ListView.separated(
+                                separatorBuilder: (context, index) =>
+                                    const SizedBox(height: 20),
+                                shrinkWrap: true,
+                                controller: controller,
+                                key: key,
+                                itemBuilder: (context, index) => PostWidget(
+                                  post: state.listPostTemp.isNotEmpty
+                                      ? state.listPostTemp[index]
+                                      : state.listPost[index],
+                                  isLikedPost: state.listLikedPost.contains(
+                                    (state.listPostTemp.isNotEmpty
+                                        ? state.listPostTemp[index].id
+                                        : state.listPost[index].id),
+                                  ),
+                                ),
+                                itemCount: state.listPostTemp.isNotEmpty
+                                    ? state.listPostTemp.length
+                                    : state.listPost.length,
+                              );
+                        // state.optionFailedOrPost.match(
+                        //     () => const SizedBox(),
+                        //     (t) => t.match(
+                        //       (l) => const SizedBox(),
+                        //       (r) => ListView.separated(
+                        //         separatorBuilder: (context, index) =>
+                        //             const SizedBox(height: 20),
+                        //         shrinkWrap: true,
+                        //         controller: controller,
+                        //         key: key,
+                        //         itemBuilder: (context, index) => PostWidget(
+                        //           post: r.data[index],
+                        //         ),
+                        //         itemCount: state.limit,
+                        //       ),
+                        //     ),
+                        //   );
+                      },
                     )
                   ],
                 ),
-                const SizedBox(height: 20),
-                const Divider(thickness: 2),
-                const SizedBox(height: 20),
-                BlocConsumer<PostBloc, PostState>(
-                  listener: (context, state) {},
-                  builder: (context, state) {
-                    return state.isLoading
-                        ? const CustomShimmerPostList()
-                        : ListView.separated(
-                            separatorBuilder: (context, index) =>
-                                const SizedBox(height: 20),
-                            shrinkWrap: true,
-                            controller: controller,
-                            key: key,
-                            itemBuilder: (context, index) => PostWidget(
-                                post: state.listPostTemp.isNotEmpty
-                                    ? state.listPostTemp[index]
-                                    : state.listPost[index]),
-                            itemCount: state.listPostTemp.isNotEmpty
-                                ? state.listPostTemp.length
-                                : state.listPost.length,
-                          );
-                    // state.optionFailedOrPost.match(
-                    //     () => const SizedBox(),
-                    //     (t) => t.match(
-                    //       (l) => const SizedBox(),
-                    //       (r) => ListView.separated(
-                    //         separatorBuilder: (context, index) =>
-                    //             const SizedBox(height: 20),
-                    //         shrinkWrap: true,
-                    //         controller: controller,
-                    //         key: key,
-                    //         itemBuilder: (context, index) => PostWidget(
-                    //           post: r.data[index],
-                    //         ),
-                    //         itemCount: state.limit,
-                    //       ),
-                    //     ),
-                    //   );
-                  },
-                )
-              ],
-            ),
-          ),
+              ),
+            );
+          },
         ),
       ),
     );

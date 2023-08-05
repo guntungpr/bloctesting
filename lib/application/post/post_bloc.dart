@@ -51,6 +51,29 @@ class PostBloc extends Bloc<PostEvent, PostState> {
             )),
           ));
         },
+        getAllListPostSQLite: (e) async {
+          emit(state.copyWith(isLoading: true));
+          final failureOrSuccess = await iProfileRepository.getAllListPostDB();
+          List<String> postLiked = [];
+          failureOrSuccess.match(
+            (l) => [],
+            (r) {
+              for (int i = 0; i < r.length; i++) {
+                postLiked.add(r[i].id);
+              }
+              return postLiked;
+            },
+          );
+          emit(state.copyWith(
+            isLoading: false,
+            listPostDb: failureOrSuccess.match(
+              (l) => <PostDetailModel>[].toIList(),
+              (r) => r.toIList(),
+            ),
+            listLikedPost: state.listLikedPost.addAll(postLiked).toIList(),
+          ));
+          emit(state.copyWith(isLoading: false));
+        },
         addLimit: (e) {
           emit(state.copyWith(page: state.page + 1));
         },
@@ -69,11 +92,13 @@ class PostBloc extends Bloc<PostEvent, PostState> {
             emit(state.copyWith(listPostTemp: <PostDetailModel>[].toIList()));
           }
         },
-        likeChanged: (e) {
-          emit(state.copyWith(page: state.page + 20));
-        },
-        addFriendChanged: (e) {
-          emit(state.copyWith(page: state.page + 20));
+        likeChanged: (e) async {
+          if (state.listLikedPost.contains(e.post.id)) {
+            emit(state.copyWith(listLikedPost: state.listLikedPost.remove(e.post.id)));
+          } else {
+            emit(state.copyWith(listLikedPost: state.listLikedPost.add(e.post.id)));
+          }
+          await iProfileRepository.addPostLiked(post: e.post);
         },
         tagSelected: (e) {
           if (state.tags.contains(e.tag)) {
